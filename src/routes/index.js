@@ -1,11 +1,7 @@
-const express = require('express');
-const userRouter = require('./user.router');
-const carRouter = require('./car.router');
+const express = require("express");
 const router = express.Router();
 
-
 // colocar las rutas aquí
-router.use('/users ', userRouter)
-router.use('/cars ', carRouter)
+// router.use('/users ', userRouter) EJEPMLO DE COMO PONER LA RUTA
 
 module.exports = router;
