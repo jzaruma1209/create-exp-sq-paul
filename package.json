@@ -1,15 +1,25 @@
 {
-  "name": "create-exp-sq-paul",
+  "name": "express-sequelize-api-template",
   "version": "1.0.0",
-  "main": "index.js",
-  "bin": {
-    "create-exp-sq-paul": "bin/cli.js"
-  },
+  "description": "Plantilla para crear APIs con Express.js, Sequelize y PostgreSQL",
+  "main": "src/server.js",
   "scripts": {
     "start": "node src/server",
-    "dev": "nodemon src/server"
+    "dev": "nodemon src/server",
+    "db:create": "npx sequelize-cli db:create",
+    "db:migrate": "npx sequelize-cli db:migrate",
+    "db:seed": "npx sequelize-cli db:seed:all",
+    "db:reset": "npx sequelize-cli db:drop && npx sequelize-cli db:create && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all",
+    "lint": "echo 'No linter configured' && exit 0",
+    "test": "echo 'No tests configured' && exit 0"
   },
-  "keywords": [],
+  "keywords": [
+    "express",
+    "sequelize",
+    "postgresql",
+    "api",
+    "template"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -19,20 +29,18 @@
     "helmet": "8.0.0",
     "pg": "8.13.0",
     "pg-hstore": "2.3.4",
-    "sequelize": "6.37.3",
-    "shelljs": "^0.8.5"
+    "sequelize": "6.37.3"
   },
   "devDependencies": {
     "nodemon": "3.1.7"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jzaruma1209/create-exp-sq2.git"
+    "url": "git+https://github.com/jzaruma1209/create-exp-sq-paul.git"
   },
   "type": "commonjs",
   "bugs": {
-    "url": "https://github.com/jzaruma1209/create-exp-sq2/issues"
+    "url": "https://github.com/jzaruma1209/create-exp-sq-paul/issues"
   },
-  "homepage": "https://github.com/jzaruma1209/create-exp-sq2#readme",
-  "description": ""
+  "homepage": "https://github.com/jzaruma1209/create-exp-sq-paul#readme"
 }
